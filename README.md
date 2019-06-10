@@ -66,12 +66,40 @@ Use your the following naming convention for your new project:
 
 JobID.ProjectName.Screenshots
 
-Create a folder on Box in the same directory as your other project assets titled Screenshots *( Share Folder access with QA Lead for review and upload to this GitHub repository)*
+Create a folder on Box in the same directory as your other project assets titled Screenshots *(Share Folder access with QA Lead for review and upload to this GitHub repository)*
 
 Select your newly created folder from the Katalon Studio New Project Set-Up screen.
 
+### Set Up CrossBrowserTesting integration
 
+Click *Project* in the main navigation and select *Settings* 
 
+Expand the *Desired Capabilities* sidebar navigation menu item and it's subnav menu item WebUI
 
+Select remote and enter the following into the *Remote web server url field:* http://qa%40juicepharma.com:u2168a770387f8d7@hub.crossbrowsertesting.com:80/wd/hub
 
+Choose *Selenium* for the Remote web server type
+
+Click Add and follow the grid below: 
+
+| Name           | Type         | Value         |
+| :------------- | :----------: | -----------:  |
+| browserName    | String       | Chrome        |
+| version        | String       | 74            |
+| platform       | String       | Mac OSX 10.14 |   
+| screenResolution | String     | 1920x1080     |
+| record_video   | Boolean      | true          |
+| name           | String       | your.project  |
+| timeout        | String       | 30000         |
+| handlesAlerts  | Boolean      | true          | 
+| nativeEvents   | Boolean      | true          |
+
+Then click *Apply* 
+
+Your Project Settings table should then programmatically add the following two lines: 
+
+| Name               | Type         | Value         |
+| :-------------     | :----------: | -----------:  |
+| remoteWebDriverUrl | String       | http://qa%40juicepharma.com:u2168a770387f8d7@hub.crossbrowsertesting.com:80/wd/hub | 
+| remoteWebDriverType | String      | Selenium      |
 
