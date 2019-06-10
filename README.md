@@ -70,7 +70,7 @@ Create a folder on Box in the same directory as your other project assets titled
 
 Select your newly created folder from the Katalon Studio New Project Set-Up screen.
 
-### Set Up CrossBrowserTesting integration
+### Set Up CrossBrowserTesting Integration and Additional Project Settings:
 
 Click *Project* in the main navigation and select *Settings* 
 
@@ -93,6 +93,7 @@ Click Add and follow the grid below:
 | timeout        | String       | 30000         |
 | handlesAlerts  | Boolean      | true          | 
 | nativeEvents   | Boolean      | true          |
+| takesScreenshot | Boolean     | true          |
 
 Then click *Apply* 
 
@@ -103,3 +104,10 @@ Your Project Settings table should then programmatically add the following two l
 | remoteWebDriverUrl | String       | http://qa%40juicepharma.com:u2168a770387f8d7@hub.crossbrowsertesting.com:80/wd/hub | 
 | remoteWebDriverType | String      | Selenium      |
 
+### Adding aShot Screenshot Utility to Enable Full Page Screenshots:
+
+Download the jar file avaliable from this [Maven Repository](https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot/1.5.4).
+
+With your *Project Settings* window already open click add *External Libraries* and locate the *ashot-1.5.4.jar* file from your *Downloads* folder. 
+
+Click *Apply* then *OKAY*.
