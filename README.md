@@ -1,4 +1,17 @@
-## PM Installation Guide for Katalon Studio and Katalon Recorder:
+# PM Setup Guide for Katalon Studio and Katalon Recorder:
+
+
+## Objective: 
+
+TBD - need to update
+
+
+## Collaborators: 
+
+Eric Norcross, VP of Technology
+Garrett Glick, QA Lead
+Jozef Woroniecki, Engineer
+
 
 ### Installing Katalon Studio Desktop App:
 
@@ -8,13 +21,14 @@ Create an account [here](https://www.katalon.com/create-account/) and take note 
 
 Open dmg and activate Katalon Studio by choosing the Sign In option and using your username and password from katalon.com/
 
+
 ### Configurations for Web UI Testing:
 
 Make sure that preferred web browsers are installed,[ refer to this guide](https://docs.katalon.com/katalon-studio/docs/supported-environments.html) for the list of supported browsers:
 
 Download [Katalon Automation Recorder](https://chrome.google.com/webstore/detail/katalon-recorder/ljdobmomdgdljniojadhoplhkpialdid) extension for Chrome in order to capture screenshots in your Active Browser.
 
-Katalon Automation Recorder can be accessed from your Chrome browser toolbar, however that will be covered later on.
+You can now access Katalon Automation Recorder from your Chrome browser toolbar, however we'll cover that later.
 
 When your build is activated, the Quick Guide screen is displayed to guide you through all major features. You can skip this and view the Quick Guide later from the Help menu.
 
@@ -77,8 +91,11 @@ With your *Project Settings* window already open click add *External Libraries* 
 
 Click *Apply* then *OKAY*.
 
+... 
 
-### Environment Setup for Mobile Testing:
+### Developer Environment Setup for Testing:
+
+#### Homebrew, NPM and Node 
 
 In case of Mobile testing, you need to install Node.js, Appium and enable USB Debugging mode on your device first.
 
@@ -96,15 +113,31 @@ Install both node and npm with Homebrew through Terminal:
 `brew install node`
 `brew install npm`
 
-Install Appium with npm through Terminal: 
+#### WebDriver Manager -- _Selenium server and browser driver manager_
 
-`npm install -g appium`
+From here Protractor's spinoff tool, `webdriver-manager` will take care of all of the rest of the heavy lifting for you.
+
+You can download the npm package from [here](https://www.npmjs.com/package/webdriver-manager) or follow the instructions below from your Terminal.
+
+To install run:
+
+`nstall -g webdriver-manager`
+
+Then you'll need to download the latest selenium server jar and chromedriver binary. Simple as:
+
+`webdriver-manager start`
+
+#### WebDriver Manager mobile setup:
+
+All set for desktop. If you want to run tests on Android run `webdriver-manager update --android --android-accept-licenses`, this will set you up with the Android SDK, Appium _(Selenium wrapper for mobile browsers and apps)_ and sign all the Android license agreements for you.
+
+For iOS run `webdriver-manager update --ios`, this checks your machine for iOS simulation capabilities. Due to Apple's strict set up, you'll also need to download the xcode commandline tools and agree to Apple's license agreement on your own. If you want to install more virtual devices than the xcode commandline tools offer, you can run `xcrun simctl` to help you with that.
+
+### Configure Katalon Recorder to use Appium for Mobile Testing:
 
 Open dmg and activate Katalon Studio using your username and password from katalon.com/
 
 Click Katalon Studio from the top nav menu, go to *Preferences > Katalon > Mobile* and set the Appium directory to */usr/local/lib/node_modules/appium* 
 
 Click *Apply* and *OK*
-
-When your build is activated, the Quick Guide screen is displayed to guide you through all major features. Feel free to explore but for the purpose of this setup you can skip this and view the Quick Guide later from the Help menu.
 
