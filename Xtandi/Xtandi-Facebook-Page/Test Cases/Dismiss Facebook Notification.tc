@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Dismiss Facebook Notification</name>
+   <tag>notification</tag>
+   <comment></comment>
+   <testCaseGuid>ca97ef6c-2886-4b25-b318-a98eeda3a1b7</testCaseGuid>
+   <variable>
+      <defaultValue>'https://www.facebook.com/'</defaultValue>
+      <description></description>
+      <id>e4d96683-97e3-4607-a342-7376c7dafbc3</id>
+      <masked>false</masked>
+      <name>G_SiteURL</name>
+   </variable>
+</TestCaseEntity>

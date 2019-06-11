@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
-   <description>Sample Project to accompany README.md setup instructions for taking screenshots in Katalon Studio.</description>
-   <name>screenshots_sample</name>
+   <description>Plugging Katalon Studios into Applitools for cross browser screenshot comparisons</description>
+   <name>Xtandi-Facebook-Page</name>
    <tag></tag>
-   <UUID>e3e65c4e-7647-480d-a90f-37db3ae0ae87</UUID>
+   <UUID>48302ec2-0e03-47dd-b476-99c49b6c4363</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <sourceContent>
