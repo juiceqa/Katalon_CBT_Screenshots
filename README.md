@@ -1,4 +1,4 @@
-## Installation Guide for Katalon Studio:
+## PM Installation Guide for Katalon Studio and Katalon Recorder:
 
 ### Installing Katalon Studio Desktop App:
 
@@ -18,45 +18,6 @@ Katalon Automation Recorder can be accessed from your Chrome browser toolbar, ho
 
 When your build is activated, the Quick Guide screen is displayed to guide you through all major features. You can skip this and view the Quick Guide later from the Help menu.
 
-### Create a Project: 
-
-Click File > New > Project from the top Navigation 
-
-Enter the name of your new project and the location to store the project data on your machine. Click OK.
-
-### Inititate Your First Test Case Using Record Playback: 
-
-
-
-### Environment Setup for Mobile Testing:
-
-In case of Mobile testing, you need to install Node.js, Appium and enable USB Debugging mode on your device first.
-
-Install macOS's missing pkg dependency handler, Homebrew, from your Terminal:
-
-`/usr/bin/ruby -e "$(curl -fsSL 
-https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-
-Install Carthage with Homebrew through Terminal: 
-
-`brew install carthage`
-
-Install both node and npm with Homebrew through Terminal:
-
-`brew install node`
-`brew install npm`
-
-Install Appium with npm through Terminal: 
-
-`npm install -g appium`
-
-Open dmg and activate Katalon Studio using your username and password from katalon.com/
-
-Click Katalon Studio from the top nav menu, go to *Preferences > Katalon > Mobile* and set the Appium directory to */usr/local/lib/node_modules/appium* 
-
-Click *Apply* and *OK*
-
-When your build is activated, the Quick Guide screen is displayed to guide you through all major features. Feel free to explore but for the purpose of this setup you can skip this and view the Quick Guide later from the Help menu.
 
 ### Create a New Project
 
@@ -69,6 +30,7 @@ JobID.ProjectName.Screenshots
 Create a folder on Box in the same directory as your other project assets titled Screenshots *(Share Folder access with QA Lead for review and upload to this GitHub repository)*
 
 Select your newly created folder from the Katalon Studio New Project Set-Up screen.
+
 
 ### Set Up CrossBrowserTesting Integration and Additional Project Settings:
 
@@ -104,6 +66,9 @@ Your Project Settings table should then programmatically add the following two l
 | remoteWebDriverUrl | String       | http://qa%40juicepharma.com:u2168a770387f8d7@hub.crossbrowsertesting.com:80/wd/hub | 
 | remoteWebDriverType | String      | Selenium      |
 
+If you get lost you can refer to [CrossBrowserTesting's documentation on Katalon integration](https://help.crossbrowsertesting.com/integrations/tutorials/katalon-studio/). Or better yet, just ask Garrett, Lead QA, or your developer on the project for help. 
+
+
 ### Adding aShot Screenshot Utility to Enable Full Page Screenshots:
 
 Download the jar file avaliable from this [Maven Repository](https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot/1.5.4).
@@ -111,3 +76,35 @@ Download the jar file avaliable from this [Maven Repository](https://mvnreposito
 With your *Project Settings* window already open click add *External Libraries* and locate the *ashot-1.5.4.jar* file from your *Downloads* folder. 
 
 Click *Apply* then *OKAY*.
+
+
+### Environment Setup for Mobile Testing:
+
+In case of Mobile testing, you need to install Node.js, Appium and enable USB Debugging mode on your device first.
+
+Install macOS's missing pkg dependency handler, Homebrew, from your Terminal:
+
+`/usr/bin/ruby -e "$(curl -fsSL 
+https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+Install Carthage with Homebrew through Terminal: 
+
+`brew install carthage`
+
+Install both node and npm with Homebrew through Terminal:
+
+`brew install node`
+`brew install npm`
+
+Install Appium with npm through Terminal: 
+
+`npm install -g appium`
+
+Open dmg and activate Katalon Studio using your username and password from katalon.com/
+
+Click Katalon Studio from the top nav menu, go to *Preferences > Katalon > Mobile* and set the Appium directory to */usr/local/lib/node_modules/appium* 
+
+Click *Apply* and *OK*
+
+When your build is activated, the Quick Guide screen is displayed to guide you through all major features. Feel free to explore but for the purpose of this setup you can skip this and view the Quick Guide later from the Help menu.
+
