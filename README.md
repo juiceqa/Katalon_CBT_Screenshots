@@ -2,21 +2,30 @@
 
 ### Homebrew, NPM and Node 
 
-In case of Mobile testing, you need to install Node.js, Appium and enable USB Debugging mode on your device first.
+For Mobile testing, you will need to install Node.js, Appium.
+      Also, be certain to enable USB Debugging mode on your device.
 
-Install macOS's missing pkg dependency handler, Homebrew, from your Terminal:
+hecking and Installing Homebrew from your Terminal:
+    Copy and paste this into your terminal:
 
-`/usr/bin/ruby -e "$(curl -fsSL 
-https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+            if [[ $(command -v brew) == "" ]]; then
+                echo "Installing Hombrew"
+                /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+            else
+                echo "Updating Homebrew"
+                brew update
+            fi
 
-Install Carthage with Homebrew through Terminal: 
 
+Install Carthage in Terminal: 
+    Copy and paste this into your terminal:
 `brew install carthage`
 
-Install both node and npm with Homebrew through Terminal:
+Install both node and npm in Terminal:
+    Copy and paste this into your terminal:
 
-`brew install node`
-`brew install npm`
+        `brew install node`
+        `brew install npm`
 
 ### WebDriver Manager -- _Selenium server and browser driver manager_
 
@@ -26,15 +35,30 @@ You can download the npm package from [here](https://www.npmjs.com/package/webdr
 
 To install run:
 
-`nstall -g webdriver-manager`
+`install -g webdriver-manager`
 
-Then you'll need to download the latest selenium server jar and chromedriver binary. Simple as:
+Next, download the latest selenium server jar and chromedriver binary:
+    Copy and paste this into your terminal:
+        'webdriver-manager update'
 
-`webdriver-manager start`
+Starting the Server
+     Copy and paste this into your terminal:
+     `webdriver-manager start`
+     Navigate to: 
+     http://localhost:4444/wd/hub.
+
+If webdriver-manager start does not work, try to clear out the saved files.
+    Copy and paste this into your terminal:
+        'webdriver-manager clean'
+
+Running / stopping server in background process (stopping is not yet supported on standalone server 3.x.x):
+    Copy and paste this into your terminal:
+        'webdriver-manager start --detach'
+        'webdriver-manager shutdown'
 
 ### WebDriver Manager mobile setup:
 
-All set for desktop. If you want to run tests on Android run `webdriver-manager update --android --android-accept-licenses`, this will set you up with the Android SDK, Appium _(Selenium wrapper for mobile browsers and apps)_ and sign all the Android license agreements for you.
+ If you want to run tests on Android run `webdriver-manager update --android --android-accept-licenses`, this will set you up with the Android SDK, Appium _(Selenium wrapper for mobile browsers and apps)_ and sign all the Android license agreements for you.
 
 For iOS run `webdriver-manager update --ios`, this checks your machine for iOS simulation capabilities. Due to Apple's strict set up, you'll also need to download the xcode commandline tools and agree to Apple's license agreement on your own. If you want to install more virtual devices than the xcode commandline tools offer, you can run `xcrun simctl` to help you with that.
 

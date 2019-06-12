@@ -61,6 +61,7 @@ Re-open Katalon Studio and Click File > Import Settings from the top nav
 Select the Alkermes-United-For-Schizophrenia-Website folder and click *OKAY.*
 
 ... _DEVS CONTINUE ONTO DEV_README.md for further set up_
+-- you renamed this README.md but indicated, above, the file was called DEV_README.....DEV_README is proper
 
 ### Record Test Case 
 
