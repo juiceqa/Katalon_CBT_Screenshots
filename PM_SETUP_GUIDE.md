@@ -3,7 +3,7 @@
 
 ## Objective: 
 
-TBD - need to update
+Automate full screenshot and unit screen shot testing.
 
 
 ## Collaborators: 
