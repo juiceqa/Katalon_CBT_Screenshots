@@ -34,15 +34,19 @@ Click the three dots in the upper left corner of your browser and select More To
 
 ### Create a New Project in Katalon Studio
 
-Click *File > New > Project* from top navigation menu.
+From top navigation menu click *File > New > Project* 
 
 Use your the following naming convention for your new project:
 
 JobID ProjectName Screenshots
+[Example: B26354 TheNewIngrezzaSite Screenshots]
 
 Create a folder on Box in the same directory as your other project assets titled Screenshots *(Share Folder access with QA Lead for review and upload to this GitHub repository)*
+--- This would require them to know how to use git or have access to github
+--or-- should we include instructions how to do that
 
 Select your newly created folder from the Katalon Studio New Project Set-Up screen.
+-- show navigation to this from within katalon.  Is this the Box folder from previous instruction or from the top navigation?
 
 ### Import Project Settings Template:
 
@@ -51,6 +55,8 @@ Click the Green *"Download or Clone"* button at the top of this page and select 
 Unzip the file and put the Alkermes-United-For-Schizophrenia-Website folder on your Desktop.
 
 Re-open Katalon Studio and Click File > Import Settings from the top nav
+--this did not work for me on mac.  
+--the proper path for me was: desktop > katalon_file > sample project > Alkermes_united... > include > config 
 
 Select the Alkermes-United-For-Schizophrenia-Website folder and click *OKAY.*
 
