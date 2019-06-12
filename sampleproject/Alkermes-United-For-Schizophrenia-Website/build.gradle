@@ -7,6 +7,9 @@ repositories {
   mavenCentral()
 }
 
+configurations {
+  compile.exclude group: 'org.seleniumhq.selenium'
+}
 dependencies {
   // sample dependencies
   // rest-assured
@@ -17,4 +20,7 @@ dependencies {
   compile 'io.rest-assured:json-path:3.2.0'
   // JSON Schema Validation
   compile 'io.rest-assured:json-schema-validator:3.2.0'
+  // Ashot Full Screenshot Utility
+  compile 'ru.yandex.qatools.ashot:ashot:1.5.4'
 }
+
