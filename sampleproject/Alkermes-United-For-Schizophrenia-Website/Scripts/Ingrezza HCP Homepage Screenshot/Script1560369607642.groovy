@@ -29,27 +29,30 @@ void takeEntirePage(WebDriver webDriver, File file, Integer timeout = 300) {
 
 WebUI.openBrowser('')
 
-// set display size to largest available on CrossBrowserTesting.com
-WebUI.setViewPortSize(1920, 1200)
+// set display size to view port of the iPhone X
+WebUI.setViewPortSize(375,812)
 
-def topPageUrl = 'https://alkermes-dse.azurewebsites.net/share-your-story'
+def topPageUrl = 'https://www.ingrezzahcp.com/'
 
 WebUI.navigateToUrl(topPageUrl)
 
 // this verification will PASS
 WebUI.verifyElementPresent(
-	findTestObject('Object Repository/Page_Share Your Story Form/button_Submit Your Story'),
+	findTestObject('Object Repository/Ingrezza-HCP/Footer Links/a_Privacy Policy'),
 	10,
 	FailureHandling.CONTINUE_ON_FAILURE)
 
+
 // take screenshot and save a PNG file into Reports dir
 Path projectDir = Paths.get(RunConfiguration.getProjectDir())
-Path reportDir = projectDir.resolve('Screenshots')
+Path reportDir = projectDir.resolve('Screenshots/IngrezzaHCPIphoneX')
 Files.createDirectories(reportDir)
-Path pngFile = reportDir.resolve('ShareYourStory.png')
+Path pngFile = reportDir.resolve('IngrezzaHCP.png')
 WebDriver driver = DriverFactory.getWebDriver()
 
 //WebUI.takeScreenshot(pngFile.toString(), FailureHandling.STOP_ON_FAILURE)
 takeEntirePage(driver, pngFile.toFile(), 500)
 
 WebUI.closeBrowser()
+
+
