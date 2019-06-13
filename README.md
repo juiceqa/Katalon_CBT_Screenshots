@@ -5,7 +5,7 @@
 For Mobile testing, you will need to install Node.js, Appium.
       Also, be certain to enable USB Debugging mode on your device.
 
-hecking and Installing Homebrew from your Terminal:
+Checking and Installing Homebrew from your Terminal:
     Copy and paste this into your terminal:
 
             if [[ $(command -v brew) == "" ]]; then
@@ -111,4 +111,4 @@ If you get lost you can refer to [CrossBrowserTesting's documentation on Katalon
 
 Download the jar file avaliable from this [Maven Repository](https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot/1.5.4).
 
-With your *Project Settings* window already open click add *External Libraries* and locate the *ashot-1.5.4.jar* file from your *Downloads* folder. 
+With your *Project Settings* window already open click add *External Libraries* and locate the *ashot-1.5.4.jar* file from your *Downloads* folder. Click "Apply" and then "OK"
