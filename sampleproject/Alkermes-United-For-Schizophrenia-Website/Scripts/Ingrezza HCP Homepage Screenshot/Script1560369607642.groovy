@@ -38,7 +38,7 @@ WebUI.navigateToUrl(topPageUrl)
 
 // this verification will PASS
 WebUI.verifyElementPresent(
-	findTestObject('Object Repository/Ingrezza-HCP/Footer Links/a_Privacy Policy'),
+	findTestObject('Ingrezza-HCP/Homepage/Footer Links/a_Privacy Policy'),
 	10,
 	FailureHandling.CONTINUE_ON_FAILURE)
 

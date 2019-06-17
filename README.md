@@ -26,9 +26,13 @@ You can download the npm package from [here](https://www.npmjs.com/package/webdr
 
 To install run:
 
-`nstall -g webdriver-manager`
+`npm install -g webdriver-manager`
 
 Then you'll need to download the latest selenium server jar and chromedriver binary. Simple as:
+
+`webdriver-manager update`
+
+Followed by: 
 
 `webdriver-manager start`
 
@@ -79,6 +83,12 @@ Your Project Settings table should then programmatically add the following two l
 | :-------------     | :----------: | -----------:  |
 | remoteWebDriverUrl | String       | http://qa%40juicepharma.com:u2168a770387f8d7@hub.crossbrowsertesting.com:80/wd/hub | 
 | remoteWebDriverType | String      | Selenium      |
+
+Navigate to the Execution tab from your Settings tab. 
+
+Expand the _Default_ execution menu dropdown and choose `Remote.`
+
+From this tab make sure that you have the _Default Page Load Timeout_ set to `Wait until the page is loaded` so that none of your tests time out. 
 
 If you get lost you can refer to [CrossBrowserTesting's documentation on Katalon integration](https://help.crossbrowsertesting.com/integrations/tutorials/katalon-studio/). Or better yet, just ask Garrett, Lead QA, or your developer on the project for help. 
 

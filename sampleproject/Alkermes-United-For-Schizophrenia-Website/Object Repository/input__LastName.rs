@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//input[@id='LastName']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@id = 'LastName' and @name = 'LastName' and @placeholder = 'Last Name' and @type = 'text']</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -67,6 +71,13 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;LastName&quot;)</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value></value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

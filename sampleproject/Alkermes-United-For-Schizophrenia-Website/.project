@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>%Users%gglick%Desktop%Development%Katalon_CBT_Screenshots%Alkermes-United-For-Schizophrenia-Website%109507 DEMO Alkermes DSE HCP Website Screenshots.prj</name>
+	<name>%Users%gglick%Desktop%Development%Katalon_CBT_Screenshots%sampleproject%Alkermes-United-For-Schizophrenia-Website%Ingrezza HCP Website Screenshots.prj</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -53,7 +53,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1560286420453</id>
+			<id>0</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -62,7 +62,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1560286420455</id>
+			<id>0</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
